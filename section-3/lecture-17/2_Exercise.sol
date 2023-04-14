@@ -9,11 +9,16 @@ to transfer these tokens from the sender to the recipient.
 contract Exercise {
 
     // TODO: Create a mapping from address to uint256 called "balances"
+    mapping(address => uint) public balances;
 
     // TODO: Create a function called "transfer" that lets the "sender"
     // send money to a "recipient" with the amount "amount". 
     // Note: You do not need to deal with any external function calls to 
     // actually send/receive Ether but rather only need to utilize the mapping 
     // "balances" to increase/decrease the amount from there directly
+    function transfer(address _sender, address _recipient, uint _amount) public {
+        balances[_sender] = balances[_sender] - _amount;
+        balances[_recipient] = balances[_recipient] + _amount;
+    }
 
 }

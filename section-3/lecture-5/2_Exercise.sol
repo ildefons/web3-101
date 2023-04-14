@@ -9,6 +9,10 @@ store this number in a state variable.
 contract Exercise {
     uint storedData; // State variable
 
+    function calculation(uint x, uint y) public returns (uint) {
+        storedData = x*(x+y);
+        return storedData;
+    }
     // TODO: 
     // Function calculation()
     // Takes two arguments of type uint

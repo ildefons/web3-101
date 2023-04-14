@@ -9,7 +9,7 @@ contract Exercise {
     // has to be exactly the amount it costs to purchase the item;
     // You can use either the "require" or the "revert" statement
     function buy() public payable {
-        
+        require(msg.value < amountRequired, "not enough");
     }
 
 }

@@ -15,6 +15,7 @@ contract Exercise {
     address public buyer; // 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2
     // Todo: Keep track of the multiple sellers rather than a single seller  
     // 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db, 0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB
+    address payable[] sellers;
 
     address public escrowParty; // 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
     // Can use https://eth-converter.com/ to convert ether to wei
@@ -46,7 +47,9 @@ contract Exercise {
     }
 
     // Todo: Create a new function to change the escrow party at any point in the future
-    // function changeEscrow()
+    function changeEscrow(address _newEscrow) public onlyEscrowParty() {
+        escrowParty = _newEscrow;
+    }
 
     modifier onlyEscrowParty() {
         require(msg.sender == escrowParty, 'Only escrow party can perform this operation');

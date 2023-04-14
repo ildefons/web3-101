@@ -25,6 +25,14 @@ contract Exercise {
 
     function remove(uint index) public {
       // TODO: Your code goes here
+      uint[] storage aux = arr;
+      for (uint i=0; i<arr.length; i++) {
+        if (i>=index) {
+          arr[i] = arr.push(arr[i]);
+
+
+        }
+      }  
     }
 
 }

@@ -9,6 +9,11 @@
 
 pragma solidity ^0.8.16;
 
+import * as stor from "../../section-2/lecture-9/1_HelloWorld.sol";
+
+
+
+
 // import * as stor from "contracts/1_Storage.sol";
 
 /*
@@ -21,3 +26,4 @@ multi-line comment
 @notice Introducing solidity by example
 @title A Hello World smart contract
 */
+

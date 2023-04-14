@@ -7,10 +7,17 @@ struct Wallet {
     uint amount;
 }
 
+struct CrowdFunding {
+  address payable benefiaciary;
+  uint numFunders;
+  Wallet[] wallets;
+}
+
 /*
 Define a struct within a struct.
 */
 contract Exercise {
+
 
   /* Todo: Create a struct called "CrowdFunding" that defines the following variables:
     Field 1: address of type payable called "beneficiary"

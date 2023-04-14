@@ -17,13 +17,19 @@ contract Exercise {
   Note: You will need to utilize the “memory” data location
   */
   // You may need to modify the below code. Think about 
-  // function func1(uint[] arr1) returns(uint[]) {}
+  function func1(uint[] memory arr1) pure public returns(uint[] memory) {
+    //uint[] memory aux = arr1;
+    return arr1;
+  }
 
   /* TODO: Create a function that takes in an array of unsigned integers called “arr2” that 
   returns the values of “arr2” immediately but with one difference being that it should 
   avoid copying the values in memory within the function. 
   */
   // You may need to modify the below code 
-  // function func2(uint[] arr2) returns(uint[]){}
+  function func2(uint[] calldata arr2) pure public returns(uint[] calldata) {
+    return arr2;
+
+  }
 
 }

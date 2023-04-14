@@ -11,7 +11,7 @@ pragma solidity ^0.8.16;
 contract Constructor1 {
     string public text;
 
-    constructor(string _t) {
+    constructor(string memory _t) {
         text = _t;
     }
 }
